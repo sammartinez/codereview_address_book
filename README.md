@@ -1,12 +1,12 @@
-# _{Address Book}_
+# Address Book
 
 ##### _{Users have the ability to add, save, and delete entries they input into their contact list.}, {August 7th, 2015}_
 
-#### By _**{Sam Martinez}**_
+#### By Sam Martinez
 
 ## Description
 
-_{The appication is designed to have a user input information such as a name of the person, their phone number, and the person's address. They also have the options to delete all of their entires they have put in. Currently, there is only a delete all function, possibly in later versions there will be a option to just delete one entry.}_
+The application is designed to have a user input information such as a name of the person, their phone number, and the person's address. They also have the options to delete all of their entires they have put in. Currently, there is only a delete all function, possibly in later versions there will be a option to just delete one entry.
 
 ## Setup
 
@@ -18,4 +18,4 @@ _{The appication is designed to have a user input information such as a name of 
 
 ## Technologies Used
 
-- Silex, Twig, Composer, PHP 
+- Silex, Twig, Composer, PHP
