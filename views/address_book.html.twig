@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="utf-8">
+            <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' rel='stylesheet'>
+            <title>Address Book</title>
+          </head>
+          <body>
+          <div class="container">
+
+            <h1>Address Book</h1>
+              <h2>Enter information below: </h2>
+
+              <form action="/contacts" method="post">
+                <div class="form-group">
+                  <label for="contactName">Name: </label>
+                  <input id="contactName" name="contactName" class="form-control" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="phoneNumber">Number: </label>
+                  <input id="phoneNumber" name="phoneNumber" class="form-control" type="number">
+                </div>
+                <div class="form-group">
+                  <label for="address">Address: </label>
+                  <input id="address" name="address" class="form-control" type="text">
+                </div>
+
+                <button type="submit" class="btn-success">Submit</button>
+              </form>
+              <form action="/delete_contacts", method="post">
+                <button type="submit">Delete all of your Contacts</button>
+              </form>
+
+          {% if contacts is not empty %}
+            <p>Contact List: </p>
+
+            {% for entry in contacts %}
+            <h4> {{ entry.getContactName }}</h4>
+            <ul>
+              <li>Phone: {{ entry.getPhoneNumber }} </li>
+              <li>Address: {{ entry.getHomeAddress }}</li>
+            </ul>
+            {% endfor %}
+          {% endif %}
+
+          </body>
+        </html>
