@@ -27,10 +27,6 @@
 
                 <button type="submit" class="btn-success">Submit</button>
               </form>
-            </br>
-              <form action="/delete_contacts", method="post">
-                <button type="submit">Delete all of your Contacts</button>
-              </form>
 
           {% if contacts is not empty %}
         </br>
@@ -44,6 +40,9 @@
             </ul>
             {% endfor %}
           {% endif %}
-
+        </br>
+          <form action="/delete_contacts", method="post">
+            <button type="submit">Delete all of your Contacts</button>
+          </form>
           </body>
         </html>

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' rel='stylesheet'>
-    <title>Address Book</title>
-  </head>
-  <body>
-      <h1>You have added a new Contact!</h1>
-      <h3> Name: {{ newcontact.getContactName }} </h3>
-      <ul>
-        <li>Phone: {{ newcontact.getContactPhone }}</li>
-        <li>Address: {{ newcontact.getHomeAddress }}</li>
-      </ul>
-      <p><a href="/">Return Home></a></p>
-  </body>
-</html>
+        <html>
+          <head>
+            <meta charset="utf-8">
+            <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' rel='stylesheet'>
+            <title>Address Book</title>
+          </head>
+          <body>
+              <h1>You have created a contact!</h1>
+              <h3> Name: {{ newcontact.getContactName }} </h3>
+              <ul>
+                <li>Phone: {{ newcontact.getContactPhone }}</li>
+                <li>Address: {{ newcontact.getHomeAddress }}</li>
+              </ul>
+              <p><a href="/">Return Home></a></p>
+          </body>
+        </html>
