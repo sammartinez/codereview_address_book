@@ -13,12 +13,12 @@
 
               <form action="/contacts" method="post">
                 <div class="form-group">
-                  <label for="contactName">Name: </label>
-                  <input id="contactName" name="contactName" class="form-control" type="text">
+                  <label for="name">Name: </label>
+                  <input id="name" name="name" class="form-control" type="text">
                 </div>
                 <div class="form-group">
-                  <label for="phoneNumber">Number: </label>
-                  <input id="phoneNumber" name="phoneNumber" class="form-control" type="number">
+                  <label for="call">Phone Number: </label>
+                  <input id="call" name="call" class="form-control" type="text">
                 </div>
                 <div class="form-group">
                   <label for="address">Address: </label>
@@ -27,18 +27,20 @@
 
                 <button type="submit" class="btn-success">Submit</button>
               </form>
+            </br>
               <form action="/delete_contacts", method="post">
                 <button type="submit">Delete all of your Contacts</button>
               </form>
 
           {% if contacts is not empty %}
-            <p>Contact List: </p>
+        </br>
+            <h2><u>Contact List: </u></h2>
 
             {% for entry in contacts %}
-            <h4> {{ entry.getContactName }}</h4>
+            <h4> {{ entry.getContactName }} </h4>
             <ul>
-              <li>Phone: {{ entry.getPhoneNumber }} </li>
-              <li>Address: {{ entry.getHomeAddress }}</li>
+              <li>Phone: {{ entry.getContactPhone }} </li>
+              <li>Address: {{ entry.getHomeAddress }} </li>
             </ul>
             {% endfor %}
           {% endif %}

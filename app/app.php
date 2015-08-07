@@ -19,12 +19,13 @@
         //Route and Controller
         $app->get("/", function() use ($app) {
           $all_contacts = Contact::getAll();
+
           return $app['twig']->render('address_book.html.twig', array('contacts' => $all_contacts));
         });
 
         //Contact Post
         $app->post("/contacts", function() use ($app) {
-          $entry = new Contact($_POST['contactName'], $_POST['phoneNumber'], $_POST['address']);
+          $entry = new Contact($_POST['name'], $_POST['call'], $_POST['address']);
           $entry->save();
           return $app['twig']->render('create_contact.html.twig', array('newcontact' => $entry));
         });

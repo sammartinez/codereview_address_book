@@ -2,14 +2,14 @@
       class Contact
       {
         private $contactName;
-        private $phoneNumber;
+        private $contactPhone;
         private $homeAddress;
 
         //Constructor
-          function __construct($contactName, $phoneNumber, $homeAddress)
+          function __construct($contactName, $contactPhone, $homeAddress)
           {
             $this->name = $contactName;
-            $this->number = $phoneNumber;
+            $this->number = $contactPhone;
             $this->address = $homeAddress;
           }
 
@@ -19,9 +19,9 @@
             $this->name = (string) $new_contact_name;
           }
 
-          function setPhoneNumber($new_phone_number)
+          function setPhone($new_contact_phone)
           {
-            $this->number = (float) $new_phone_number;
+            $this->number = (float) $new_contact_phone;
           }
 
           function setHomeAddress($new_home_address)
@@ -35,7 +35,7 @@
             return $this->name;
           }
 
-          function getPhoneNumber()
+          function getContactPhone()
           {
             return $this->number;
           }
