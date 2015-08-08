@@ -1,4 +1,11 @@
 <?php
+
+    //SPACING questions! so is this the proper spacing of four lines ?
+    //I tried to be consisted across all of my project folder for spacing
+    //to make sure that I was doing proper indentation just to get into the habit.
+    //I think I originally did for "tab" indents instead of four spaces.
+    //So really just double checking this is the proper spacing.
+
     require_once __DIR__."/../vendor/autoload.php";
     require_once __DIR__."/../src/Contact.php";
 
@@ -25,7 +32,7 @@
 
     //Contact Post
     // Sam Comments - Thanks for the feedback on my project in this post method
-    //I changed the variable name to what you guys recommended. 
+    //I changed the variable name to what you guys recommended.
 
     $app->post("/contacts", function() use ($app) {
       $contact = new Contact($_POST['name'], $_POST['call'], $_POST['address']);
