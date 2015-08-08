@@ -24,6 +24,9 @@
     });
 
     //Contact Post
+    // Sam Comments - Thanks for the feedback on my project in this post method
+    //I changed the variable name to what you guys recommended. 
+
     $app->post("/contacts", function() use ($app) {
       $contact = new Contact($_POST['name'], $_POST['call'], $_POST['address']);
       $contact->save();
