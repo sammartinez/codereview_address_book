@@ -25,8 +25,8 @@
 
     //Contact Post
     $app->post("/contacts", function() use ($app) {
-      $entry = new Contact($_POST['name'], $_POST['call'], $_POST['address']);
-      $entry->save();
+      $contact = new Contact($_POST['name'], $_POST['call'], $_POST['address']);
+      $contact->save();
       return $app['twig']->render('create_contact.html.twig', array('newcontact' => $contact));
     });
 
